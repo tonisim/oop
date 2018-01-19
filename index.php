@@ -9,3 +9,7 @@
 
 //Loeme sisse projekti konfiguratsiooni faili
 require_once 'conf.php';
+
+//Loome test objekti template klassist
+
+$testtabel = new template('views/test.html');

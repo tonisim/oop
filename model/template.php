@@ -29,7 +29,7 @@ class template
     //HTML sisu lugemine, kus vajalikud tingimused on täidetud
     function loadfile(){
         if (!is_dir(VIEW_DIR)){
-            echo 'Ei ole leitud'.VIEW_DIR. 'nimega kataloogi<br/>';
+            echo 'Ei ole leitud '.VIEW_DIR. ' nimega kataloogi<br/>';
             exit;
         }
         // Kui faili nimi on määratud kujul /views/failinimi.html
@@ -46,7 +46,7 @@ class template
             $this->readfile($file);
         }
         if ($this->content === false){
-            echo 'Ei suutnud lugeda' .$this->file.'sisu<br/>';
+            echo 'Ei suutnud lugeda ' .$this->file.' sisu<br/>';
             exit;
         }
     }
