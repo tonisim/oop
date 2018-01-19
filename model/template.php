@@ -62,8 +62,18 @@ class template
     }
 
     //Malli elemendi nimija reaalväärtuse paari koostamine ja lisamine $this->vars  masiivi sisse
-    function set($name, $value){
-        $this->vars($name) = $value;
+    function set($name, $value)
+    {
+        $this->vars[$name] = $value;
     }
+        // anname muudetud sisu tagasi pohiprogrammile
+        function parse(){
+            $str = $this->content;
+            foreach ($this->vars as $name=>$value) {
+                str_replace('('.$name.')',$value, $str);
+
+            }
+        }
+
 
 }

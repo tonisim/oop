@@ -13,8 +13,12 @@ require_once 'conf.php';
 //Loome test objekti template klassist
 
 $testtabel = new template('views/test.html');
-
+//Määrame reaalväärtused malli elementidele
+$testtabel->set('esimene', '1');
+$testtabel->set('teine','2');
 //Lisanme objekti testvaade
 echo '<pre>';
 print_r($testtabel);
 echo '</pre>';
+
+echo $testtabel->parse();
