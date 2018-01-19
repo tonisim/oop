@@ -6,5 +6,5 @@
  * Time: 9:44
  */
 define('MODEL_DIR', 'model/');
-define('VIEWS_DIR', 'views/');
+define('VIEW_DIR', 'views/');
 define('CONTROL_DIR', 'controllers/');
