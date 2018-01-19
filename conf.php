@@ -8,3 +8,6 @@
 define('MODEL_DIR', 'model/');
 define('VIEW_DIR', 'views/');
 define('CONTROL_DIR', 'controllers/');
+
+//Nõuame vajalike failide kasutamine
+require_once MODEL_DIR.'template.php';
