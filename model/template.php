@@ -61,4 +61,9 @@ class template
             $this->content = file_get_contents($file);
     }
 
+    //Malli elemendi nimija reaalväärtuse paari koostamine ja lisamine $this->vars  masiivi sisse
+    function set($name, $value){
+        $this->vars($name) = $value;
+    }
+
 }
