@@ -6,7 +6,7 @@
  * Time: 10:22
  */
 
-class template
+class maintmpl
 {
     //klassi muutujad
     var $file =  ''; // HTML malli faili nimi
@@ -55,10 +55,10 @@ class template
 
     //HTML malli failist sisu lugemine
     function readfile($file){
-            /*$fp =  fopen($file, 'r');
-            $this->content = fread($fp, filesize($file));
-            fclose($fp);*/
-            $this->content = file_get_contents($file);
+        /*$fp =  fopen($file, 'r');
+        $this->content = fread($fp, filesize($file));
+        fclose($fp);*/
+        $this->content = file_get_contents($file);
     }
 
     //Malli elemendi nimija reaalväärtuse paari koostamine ja lisamine $this->vars  masiivi sisse
@@ -66,15 +66,15 @@ class template
     {
         $this->vars[$name] = $value;
     }
-        // anname muudetud sisu tagasi pohiprogrammile
-        function parse(){
-            $str = $this->content;
-            foreach ($this->vars as $name=>$value) {
-                $str = str_replace('{'.$name.'}',$value, $str);
+    // anname muudetud sisu tagasi pohiprogrammile
+    function parse(){
+        $str = $this->content;
+        foreach ($this->vars as $name=>$value) {
+            $str = str_replace('('.$name.')',$value, $str);
 
-            }
-            return $str;
         }
+        return $str;
+    }
 
 
 

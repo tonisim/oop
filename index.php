@@ -22,3 +22,18 @@ print_r($testtabel);
 echo '</pre>';
 
 echo $testtabel->parse();
+echo '<hr/>';
+
+$main = new template('main');
+//Määrame reaalväärtused malli elementidele
+$main->set('user', 'Kasutaja');
+$main->set('title','Pealkiri');
+$main->set('lang_bar','Keeled');
+$main->set('menu','Menyy');
+$main->set('content','Sisu');
+//Lisanme objekti testvaade
+echo '<pre>';
+print_r($main);
+echo '</pre>';
+
+echo $main->parse();
