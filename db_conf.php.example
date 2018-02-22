@@ -1,0 +1,1 @@
+<?php/** * Created by PhpStorm. * User: Tõnis * Date: 02.02.2018 * Time: 11:03 */define('DB_HOST','localhost');define('DB_USER','userww');define('DB_PASS','examplepw');define('DB_DBNAME','ee');
